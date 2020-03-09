@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'vygd&ye2lwtjt3&0^rraxrnkj&2qq9yvm$2n7y*njdlvjjjl^-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["langdon-alger.herokuapp.com"]
 
