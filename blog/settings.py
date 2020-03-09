@@ -82,6 +82,7 @@ DATABASES = {
         'USER': 'bea2f12fc3e263',
         'PASSWORD': 'b13eb0a',
         'HOST': 'us-cdbr-iron-east-04.cleardb.net',
+        'PORT': 3306,
     }
 }
 
