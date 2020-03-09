@@ -83,6 +83,10 @@ DATABASES = {
         'PASSWORD': 'd987ff85',
         'HOST': 'us-cdbr-iron-east-04.cleardb.net',
         'PORT': 3306,
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            'autocommit': True,
+        }
     }
 }
 
