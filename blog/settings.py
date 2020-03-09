@@ -130,4 +130,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # Activate Django-Herokou
 django_heroku.settings(locals())
-del DATABASES['default']['OPTIONS']['sslmode']
