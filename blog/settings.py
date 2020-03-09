@@ -82,10 +82,6 @@ DATABASES = {
         'USER': 'b9707faa7f7074',
         'PASSWORD': 'd987ff85',
         'HOST': 'us-cdbr-iron-east-04.cleardb.net',
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-            'autocommit': True,
-        }
     }
 }
 
