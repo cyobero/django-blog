@@ -1,3 +1,4 @@
+import django_heroku
 """
 Django settings for blog project.
 
@@ -77,7 +78,7 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'heroku_389d24a2735254a',
+        'NAME': 'heroku_0affc4792ae8614',
         'USER': 'bea2f12fc3e263',
         'PASSWORD': 'b13eb0a',
         'HOST': 'us-cdbr-iron-east-04.cleardb.net',
@@ -126,3 +127,4 @@ STATIC_ROOT = BASE_DIR
 STATICFILES_DIR = [os.path.join(BASE_DIR, 'static'), ]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
