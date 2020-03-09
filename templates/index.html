@@ -1,0 +1,161 @@
+{% load static %}
+<!doctype html>
+<html>
+   <head>
+	{% block title %}
+	<title>index</title>
+	{% endblock %}
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+	<style>
+body {
+   background-color: rgb(52,58,64);
+   color: darkorange;
+   font-family: "Fantasque Sans Mono";
+}
+
+p .lead {
+   color: plum;
+}
+
+.card-text {
+   color: black;
+}
+
+
+.text-muted {
+   color: plum;
+   font-family: "Fantasque Sans Mono";
+
+}
+
+#rcorners1 {
+  border-radius: 25px;
+  background: #73AD21;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
+
+
+h1{
+   font-family: "Fantasque Sans Mono";
+   font-size: 390%;
+   color: floralwhite;
+}
+
+
+.bg-dark {
+   background-color: #212529;
+}
+
+
+/* The navigation bar */
+.navbar {
+   overflow: hidden;
+   background-color: #212529;
+   font-family: "Victor Mono", sans-serif;
+   color: #212529;
+   position: fixed; /* Set the navbar to fixed position */
+   top: 2; /* Position the navbar at the top of the page */
+   width: 100%; /* Full width */
+   font-family: "Roboto", sans-serif;
+}
+
+/* Links inside the navbar */
+.navbar a {
+   float: left;
+   display: block;
+   color: #212529;
+   text-align: left;
+   padding: 14px 16px;
+   text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+   background: #212529;
+   color: #212529;
+}
+
+.text-muted {
+   color: burlywood;
+}
+
+
+/* Main content */
+.main {
+   margin-top: 32px; /* Add a top margin to avoid content overlay */
+}
+.footer {
+   position: fixed;
+	left: 0;
+	   bottom: 0;
+		width: 100%;
+	
+}
+
+	</style>
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Caladea|Merriweather|Noto+Sans|Oswald|Roboto&display=swap" rel="stylesheet">
+   </head>
+   <body>
+	<!-- Navbar -->
+	<!-- As a link -->
+	<nav class="navbar navbar-fixed-top navbar-dark bg-dark">
+	   <a class="navbar-brand" href="#">czar</a>
+	</nav>
+	<!-- As a link -->
+	{% block content %}
+	<div class="container">
+	   <div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+		   <h1 class="display-6">czar's blog</h1>
+		   <p class="text-muted">I mostly write tutorials about tech, but also share memz
+			(memes), music, one-liners, and other random misc...</small>
+		   </h1><br><br>
+
+
+		</div>
+		<div class="col-md-2"></div>
+	   </div>
+	</div>
+
+	<!-- Posts -->
+	<div class="container">
+	   <div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-8">
+		   {% for post in posts %}
+		   <div class="card mb-3 shadow p-3 shadow-lg p-3 mb-5 bg-white rounded">
+			<img src="{{ post.image.url }}" class="card-img-top"
+					     alt="..." width="500"height="480">
+			<div class="card-body">
+			   <h5 class="card-title">{{ post.title }}</h5>
+			   <p class="card-text">{{ post.summary }}
+				{% if post.body %}
+				<a href="post/{{ post.slug }}">Read more...</a>
+				{% endif %}</p>
+			   <p class="card-text"><small class="text-muted">Published
+				   On: {{ post.publish_date }}</small></p>
+			</div>
+		   </div>
+		   {% endfor %}
+		</div></hr>
+		<div class="col-md-2"></div>
+	   </div>
+	</div>
+	{% endblock %}
+
+	<!-- Footer -->
+	<footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+	   <div class="container text-center">
+		<small>Copyright &copy; Czar Yobero</small>
+	   </div>
+	</footer>
+   </body>
+</html>

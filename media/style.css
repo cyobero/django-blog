@@ -1,0 +1,80 @@
+:root {
+   font-size: 16px;
+   font-family: 'Open Sans';
+   --text-primary: #b6b6b6;
+   --text-secondary: #ececec;
+   --bg-primary: #23232e;
+   --bg-secondary: #141418;
+}
+
+body {
+   color: black;
+   background-color: white;
+   margin: 0;
+   padding: 0;
+}
+
+body::webkit-scrollbar {
+   width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+   background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+   background: #6649b8;
+}
+
+main {
+   margin-top: 5rem;html {
+  --text-color-normal: #0a244d;
+  --text-color-light: #8cabd9;
+}
+
+html[data-theme='dark'] {
+  --text-color-normal: hsl(210, 10%, 62%);
+  --text-color-light: hsl(210, 15%, 35%);
+  --text-color-richer: hsl(210, 50%, 72%);
+  --text-color-highlight: hsl(25, 70%, 45%);
+}
+   margin-bottom: 5rem;
+   margin-left: 5rem;
+   padding: 1rem;
+}
+
+.navbar {
+   width: 5rem;
+   height: 100vh;
+   position: fixed;
+   background-color: var(--bg-primary);
+}
+
+.navbar-nav {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.navbar:hover {
+   width: 16rem;
+}
+
+.navbar:hover .link-text {
+   display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  img {
+    opacity: .75;
+    transition: opacity .5s ease-in-out;
+  }
+  img:hover {
+    opacity: 1;
+  }
+}
+
+

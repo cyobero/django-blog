@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block title %}
+<title>{{ post.title }}</title>
+<style>
+body {
+   color: burlywood;
+}
+
+h1 {
+   color: white;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+   <div class="row">
+	<div class="col-md-12">
+	   <h1 class="display-3">{{ post.title }}</h1>
+	   <p class="lead">Published on: {{ post.publish_date }}</p>
+	   <hr>
+	   <img class="border-radius" alt=".." align="center" width="910" height="572" src="{{ post.image.url }}">
+	   <hr>
+	   {% autoescape off %}
+	   {{ post.body }}
+	   {% endautoescape %}
+	</div>
+	<div class="col-md-2"></div>
+   </div>
+</div>
+{% endblock %}

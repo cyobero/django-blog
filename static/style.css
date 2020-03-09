@@ -1,0 +1,98 @@
+:root {
+   font-size: 16px;
+   font-family: 'Roboto';
+   --text-primary: #b6b6b6;
+   --text-secondary: #ececec;
+   --bg-primary: #616060;
+   --bg-secondary: #141418;
+}
+
+body {
+   color: #616060;
+   background-color: #616060;
+   margin: 10;
+   padding: 10;
+}
+
+body::webkit-scrollbar {
+   width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+   background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+   background: #6649b8;
+}
+
+main {
+   margin-top: 5rem;html {
+  --text-color-normal: #616060;
+  --text-color-light: #8cabd9;
+}
+
+html[data-theme='dark'] {
+  --text-color-normal: hsl(210, 10%, 62%);
+  --text-color-light: hsl(210, 15%, 35%);
+  --text-color-richer: hsl(210, 50%, 72%);
+  --text-color-highlight: hsl(25, 70%, 45%);
+}
+   margin-bottom: 5rem;
+   margin-left: 5rem;
+   padding: 1rem;
+}
+
+.navbar {
+   width: 5rem;
+   height: 100vh;
+   position: fixed;
+   background-color: var(--bg-primary);
+}
+
+.navbar-nav {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.navbar:hover {
+   width: 16rem;
+}
+
+.navbar:hover .link-text {
+   display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  img {
+    opacity: .75;
+    transition: opacity .5s ease-in-out;
+  }
+  img:hover {
+    opacity: 1;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
+/* Other Classes for Page Styling */
+
+body {
+  background: #007bff;
+  background: linear-gradient(to right, #0062E6, #33AEFF);
+}
